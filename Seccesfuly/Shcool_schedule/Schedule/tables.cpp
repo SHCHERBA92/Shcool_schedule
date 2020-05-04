@@ -11,7 +11,7 @@ Tables::~Tables()
 
 }
 
-QTableWidget *Tables::MY_Table(QTableWidget *Tabl, QString str)
+QTableWidget *Tables::MY_Table(QTableWidget *Tabl, QStringList *List_Predmet)
 {
     Tabl->setRowCount(8);
     Tabl->setColumnCount(5);
@@ -28,19 +28,19 @@ QTableWidget *Tables::MY_Table(QTableWidget *Tabl, QString str)
                                      << QString::number(7)
                                      << QString::number(8));
 
-    QStringList *List_Predmet = new QStringList();
-    *List_Predmet << "Русский Язык"
-                     << "Математика"
-                     << "Геометрия"
-                     << "История"
-                     << "Биология"
-                     << "Физика"
-                     << "Химия"
-                     << "Обществознание"
-                     << "Английский"
-                     << "Труд"
-                     << "Физкультура";
-    List_Predmet->append(str);
+//    QStringList *List_Predmet = new QStringList();
+//    *List_Predmet << "Русский Язык"
+//                     << "Математика"
+//                     << "Геометрия"
+//                     << "История"
+//                     << "Биология"
+//                     << "Физика"
+//                     << "Химия"
+//                     << "Обществознание"
+//                     << "Английский"
+//                     << "Труд"
+//                     << "Физкультура";
+//    List_Predmet->append(str);
 
     List_Predmet->sort(Qt::CaseSensitivity::CaseSensitive); // сортировка по алфавиту
 

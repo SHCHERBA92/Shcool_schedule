@@ -48,7 +48,9 @@ private:
 
     void Creat_Table(QTableWidget &Tabl);   // Метод для создания таблицы
 
-    QString sub;
+    //QString sub;
+
+    QStringList *List_Predmet;
 
 
 };

@@ -18,7 +18,7 @@ public:
 
     ~Tables();
 
-    QTableWidget *MY_Table(QTableWidget *Table, QString str);
+    QTableWidget *MY_Table(QTableWidget *Table, QStringList *List_Predmet);
 
 signals:
 
