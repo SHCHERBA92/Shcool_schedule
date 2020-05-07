@@ -52,7 +52,7 @@ QTableWidget *Tables::MY_Table(QTableWidget *Tabl, QStringList *List_Predmet, QS
         {
             QWidget *Widget_chekBox = new QWidget();
             QHBoxLayout *HLayat = new QHBoxLayout(Widget_chekBox);
-            My_Check_Box = new QCheckBox();
+            auto My_Check_Box = new QCheckBox();
 
             My_Check_Box->setText("");
             HLayat->addWidget(My_Check_Box);
@@ -61,12 +61,12 @@ QTableWidget *Tables::MY_Table(QTableWidget *Tabl, QStringList *List_Predmet, QS
 
             Tabl->setCellWidget(var, 4, Widget_chekBox);
 
+            auto firstCollomWidget = Tabl->cellWidget(var,1);
+            auto secondCollomWidget = Tabl->cellWidget(var,2);
 
+            connect(My_Check_Box, &QCheckBox::stateChanged, this, [=](int a){firstCollomWidget->setDisabled(a != 0);});
+            connect(My_Check_Box, &QCheckBox::stateChanged, this, [=](int a){secondCollomWidget->setDisabled(a != 0);});
 
-//            if(My_Check_Box->isChecked())
-//            {
-//                Tabl->setRowHidden(var, true);
-//            }
         }
 
     for (int var = 0, temp = 0; var < Tabl->rowCount(); ++var, temp+=45)

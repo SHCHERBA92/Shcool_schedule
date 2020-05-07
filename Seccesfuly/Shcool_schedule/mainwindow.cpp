@@ -55,8 +55,6 @@ MainWindow::MainWindow(QWidget *parent)
     Widget_Table->MY_Table(ui->tableWidget_6, List_Predmet, List_Prepod);
 
 
-
-
 }
 
 MainWindow::~MainWindow()

@@ -2,7 +2,6 @@
 #include "ui_add_teacher.h"
 
 #include <QDebug>
-#include <QMessageBox>
 
 Add_teacher::Add_teacher(QWidget *parent) :
     QDialog(parent),
@@ -32,28 +31,13 @@ void Add_teacher::on_pushButton_3_clicked()
 
 void Add_teacher::on_pushButton_2_clicked()
 {
-    if(ui->lineEdit->text() == "")
-    {
-        QMessageBox::warning(this, "Не корректныый ввод", "Введите фамилию преподавателя");
-    }
+    List_Prepod_add->append(ui->lineEdit->text());
+    set.Set_Setting_List_Prepod(*List_Prepod_add);
 
-    else if(!(List_Prepod_add->filter(ui->lineEdit->text()).isEmpty()))
-    {
-        QMessageBox::warning(this, "Не корректныый ввод", "Такой преподаватель уже внесён в список");
-    }
+    ui->listWidget->clear();
+    ui->listWidget->addItems(*List_Prepod_add);
 
-    else
-    {
-
-        List_Prepod_add->append(ui->lineEdit->text());
-        set.Set_Setting_List_Prepod(*List_Prepod_add);
-
-        ui->listWidget->clear();
-        ui->listWidget->addItems(*List_Prepod_add);
-
-        emit signals_add_teachers(*List_Prepod_add);
-
-    }
+    emit signals_add_teachers(*List_Prepod_add);
 }
 
 void Add_teacher::on_pushButton_clicked()

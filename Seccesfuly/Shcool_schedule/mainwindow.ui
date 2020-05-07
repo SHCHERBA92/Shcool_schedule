@@ -122,12 +122,12 @@
   </action>
   <action name="action_2">
    <property name="text">
-    <string>Редактировать Предмет</string>
+    <string>Добавить предмет</string>
    </property>
   </action>
   <action name="action_3">
    <property name="text">
-    <string>Редактировать Преподавателя</string>
+    <string>Добавить Преподавателя</string>
    </property>
   </action>
  </widget>

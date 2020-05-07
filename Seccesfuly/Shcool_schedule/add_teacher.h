@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <QString>
-#include <QStringList>
 
 #include "setting.h"
 

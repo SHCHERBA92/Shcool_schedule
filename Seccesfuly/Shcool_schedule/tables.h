@@ -22,9 +22,6 @@ public:
 
 signals:
 
-private:
-    QCheckBox *My_Check_Box;
-    void Check_Box_Status();
 };
 
 #endif // TABLES_H
