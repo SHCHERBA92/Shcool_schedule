@@ -11,21 +11,21 @@ class Setting : public QMainWindow
 public:
     explicit Setting(QWidget *parent = nullptr);
 
-   void Set_Setting_List_Predmet(QStringList List_Predmet);
-   QStringList Get_Setting_List_Predmet();
+   void Set_SettingListPredmet(QStringList ListPredmet);
+   QStringList Get_SettingListPredmet();
 
-   void Set_Setting_List_Prepod(QStringList List_Prepod);
-   QStringList Get_Setting_List_Prepod();
+   void Set_SettingListPrepod(QStringList ListPrepod);
+   QStringList Get_SettingListPrepod();
 
 
 signals:
 
 private:
-    QStringList *List_Predmet;
-    QStringList *List_Prepod;
+    QStringList *ListPredmet;
+    QStringList *ListPrepod;
 
-    QSettings *Setting_predmet;
-    QSettings *Setting_prepod;
+    QSettings *SettingPredmet;
+    QSettings *SettingPrepod;
 
 
 };

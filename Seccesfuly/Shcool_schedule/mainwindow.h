@@ -10,6 +10,8 @@
 #include <QStringList>
 #include <QCheckBox>
 #include <QTime>
+#include <QDate>
+#include <QCalendar>
 
 #include <QDebug>
 
@@ -31,27 +33,27 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     // Класс для создания таблицы
-    Tables *Widget_Table;
+    Tables *WidgetTable;
 
     //Класс для настроек передачи предметов или преаодавателей в таблицу
-    Setting *setting_setting;
+    Setting *settingSetting;
 
 private slots:
-    void on_action_2_triggered();
-    void slot_add_Subject(const QStringList &str_List_Subject);
+    void on_actionEditSubject_triggered();
+    void slotAddSubject(const QStringList &strListSubject);
 
-    void on_action_3_triggered();
-    void slot_add_Teachers(const QStringList &str_List_Prepod);
+    void on_actionEdditTeachers_triggered();
+    void slotAddTeachers(const QStringList &strListPrepod);
 
 private:
     Ui::MainWindow *ui;
 
-    void Creat_Table(QTableWidget &Tabl);   // Метод для создания таблицы
-
-
     // Обьекты для списка предметов и преподавателей
-    QStringList *List_Predmet;
-    QStringList *List_Prepod;
+    QStringList *ListPredmet;
+    QStringList *ListPrepod;
+
+    // метод для внешнего вида MainWindow
+    void CreatUi();
 
 
 };

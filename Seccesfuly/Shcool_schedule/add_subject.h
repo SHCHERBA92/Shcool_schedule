@@ -20,19 +20,23 @@ public:
     ~Add_Subject();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_pushButtonCancel_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButtonAdd_clicked();
+
+    void on_pushButtonDelete_clicked();
+
+
 
 private:
     Ui::Add_Subject *ui;
 
     Setting set;    // класс по сохранению настроек
 
-    QStringList *List_Predmet_add;
+    QStringList *listPredmetadd;
 
 signals:
-    void signall_Add(const QStringList &str_list);
+    void signall_Add_Subject(const QStringList &str_list);
 };
 
 #endif // ADD_SUBJECT_H

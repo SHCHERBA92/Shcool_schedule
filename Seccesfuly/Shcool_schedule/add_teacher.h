@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+#include <QStringList>
 
 #include "setting.h"
 
@@ -19,11 +20,11 @@ public:
     ~Add_teacher();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_pushButtonCancel_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButtonAdd_clicked();
 
-    void on_pushButton_clicked();
+    void on_pushButtonDelete_clicked();
 
 private:
     Ui::Add_teacher *ui;

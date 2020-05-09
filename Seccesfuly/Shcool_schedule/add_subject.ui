@@ -17,14 +17,14 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="label_spidokPredmetov">
        <property name="text">
         <string>Список предметов</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="listWidget"/>
+      <widget class="QListWidget" name="listWidgetSpisokPredmetov"/>
      </item>
     </layout>
    </item>
@@ -33,35 +33,53 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="labelAddPredmet">
          <property name="text">
           <string>Добавить предмет</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="lineEditAddPredmet"/>
        </item>
       </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButtonCancel">
+         <property name="styleSheet">
+          <string notr="true">#pushButtonCancel {
+padding: 5px;
+}</string>
+         </property>
          <property name="text">
           <string>Отменить</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButtonDelete">
+         <property name="styleSheet">
+          <string notr="true">#pushButtonDelete {
+padding: 5px;
+}</string>
+         </property>
          <property name="text">
           <string>Удалить</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButtonAdd">
+         <property name="styleSheet">
+          <string notr="true">#pushButtonAdd {
+padding: 5px;
+}</string>
+         </property>
          <property name="text">
           <string>Добавить</string>
          </property>
