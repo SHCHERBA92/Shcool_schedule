@@ -206,6 +206,27 @@ void MainWindow::CreatUi()
     }
 
 
+    if(toDayDate.dayOfWeek() == 7)  //Воскресение
+    {
+        toDayDate = QDate::currentDate().addDays(1);
+        ui->labelDateMonday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+        toDayDate = QDate::currentDate().addDays(2);
+        ui->labelDateTuesday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+        toDayDate = QDate::currentDate().addDays(3);
+        ui->labelDateWednsday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+        toDayDate = QDate::currentDate().addDays(4);
+        ui->labelDateThursday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+        toDayDate = QDate::currentDate().addDays(5);
+        ui->labelDateFriday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+        toDayDate = QDate::currentDate().addDays(6);
+        ui->labelDateSaturday->setText(toDayDate.toString("dd.MM.yyyy"));
+
+    }
 
 }
 
